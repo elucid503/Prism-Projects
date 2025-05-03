@@ -60,9 +60,9 @@ func main() {
 	
 	// Explorer:
 
-	GinRouter.Static("Ethics/Explorer/Out", "../Frontend/Explorer/Out")
-	GinRouter.Static("Ethics/Explorer/Assets", "../Frontend/Explorer/Assets")
-	GinRouter.Static("Ethics/Explorer/Styles", "../Frontend/Explorer/Styles") // for maps back to SCSS
+	GinRouter.Static("/Explorer/Out", "../Frontend/Explorer/Out")
+	GinRouter.Static("/Explorer/Assets", "../Frontend/Explorer/Assets")
+	GinRouter.Static("/Explorer/Styles", "../Frontend/Explorer/Styles") // for maps back to SCSS
 
 	Functions.Log(Logs.LogLevelInfo, "Server", fmt.Sprintf("Listening on port %d...", Config.Server.Port))
 

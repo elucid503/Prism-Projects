@@ -76,6 +76,12 @@ body {
 
     margin: 0;
 
+    @include RespondTo("Mobile") {
+
+        align-content: none;
+
+    }
+
 }
 
 .Content {

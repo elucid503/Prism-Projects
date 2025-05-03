@@ -61,6 +61,10 @@ export function InitiateQandA() {
 
     $(window).on("resize", CalculateAndSetHeight); // Also bind to resize here since we're only calling this once, and its good UX to have it
 
+    // Set the body to the top to avoid scroll problems 
+
+    document.scrollingElement?.scrollTo(0, 0);
+
     // Prime the animation
 
     RelevantElements.Response.find(".Phrase").css("display", "none");

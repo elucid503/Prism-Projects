@@ -20,7 +20,7 @@ const RelevantElements = {
 
 export function InitiateHighlightPlaceholder(): void {
 
-    const IsMobile = "ontouchstart" in window || navigator.maxTouchPoints > 0 || (navigator as any).msMaxTouchPoints > 0;
+    const IsMobile = window.innerWidth < 768; // Not really the best method, but this is fine
 
     const PlaceholderText = IsMobile ? "Tap" : "Hover and click";
 
@@ -40,9 +40,7 @@ export function SetHighlight(AssociatedPhraseIndex: number): void {
 
 export function ShowHighlight(): void {
 
-    RelevantElements.HighlightContainer.fadeIn(AnimationTimes.Short);
-
-    // TODO: Handle closing here, somehow
+    RelevantElements.HighlightContainer[0].scrollIntoView({ behavior: "smooth", block: "nearest" });
 
 }
 

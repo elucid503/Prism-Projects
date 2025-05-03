@@ -18,10 +18,12 @@
     font-size: $FontSizeSmall;
     text-align: left;
 
+    opacity: 0.65;
+
 }
 
 .Container.ResponseHighlightPlaceholder ion-icon {
 
-    font-size: $FontSizeMedium * 1.5;
+    font-size: $FontSizeMedium * 2;
     
 }
