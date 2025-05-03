@@ -62,12 +62,11 @@ $TransitionTime: 0.1s;
 
 body {
 
-    height: 100vh;
-    align-content: center;
-
     font-family: "ibm-plex-serif", sans-serif;
     font-weight: 400;
     font-style: normal;
+
+    height: 100vh;
 
     line-height: 1.75;
 
@@ -78,7 +77,7 @@ body {
 
     @include RespondTo("Mobile") {
 
-        align-content: none;
+        height: unset;
 
     }
 
@@ -88,6 +87,8 @@ body {
 
     @include FlexCenter();
     flex-direction: column;
+
+    height: 100%;
 
     gap: $SpacingMedium;
     padding: $SpacingMedium;

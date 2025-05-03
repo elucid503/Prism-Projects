@@ -34,7 +34,7 @@ export function SetHighlight(AssociatedPhraseIndex: number): void {
     
     const AssociatedPhraseDescription = AllPhrases[AssociatedPhraseIndex][1];
 
-    RelevantElements.HighlightContent.html(AssociatedPhraseDescription); // .html is useful here since sometimes we'll have tags in the descriptions
+    RelevantElements.HighlightContent.html(AssociatedPhraseDescription); // want to use html function here since sometimes we'll have tags in the descriptions
     
 }
 
