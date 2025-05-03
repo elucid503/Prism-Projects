@@ -1,0 +1,33 @@
+.Container.Response {
+
+    font-size: $FontSizeLarge;
+    width: 100%;
+
+}
+
+.Phrase {
+
+    align-items: center;
+    padding: $SpacingSmall * 0.25;
+
+    margin: 0 -($SpacingSmall * 0.25);
+    
+    border-radius: $BorderRadiusSmall * 1.5;
+
+    transition: background-color $TransitionTime ease-in-out;
+    
+}
+
+@mixin SelectedPhrase() {
+
+    background-color: $ElementColorLightest;
+    filter: brightness(1.1);
+    cursor: pointer;
+    
+}
+
+.Phrase.Selected, .Phrase:hover {
+
+    @include SelectedPhrase();
+
+}

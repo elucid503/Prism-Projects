@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <title>Moral Question Explorer</title>
+  <link rel="icon" href="Explorer/Assets/Explorer.ico" type="image/x-icon">
+
+  <!-- Embeds -->
+
+  <meta name="description" content="This website serves as my final project for RLST 1501 @ Fairfield University. It provides an answer to my moral question in a simple, straightforward and interactive way.">
+
+  <!-- Open Graph -->
+
+  <meta property="og:title" content="Moral Question Explorer">
+  <meta property="og:description" content="This website serves as my final project for RLST 1501 @ Fairfield University. It provides an answer my moral question in a simple, straightforward and interactive way.">
+  <meta property="og:image" content="Explorer/Assets/Explorer.png">
+
+  <!-- Twitter Card (Thumbnail) -->
+
+  <meta name="twitter:title" content="Moral Question Explorer">
+  <meta name="twitter:description" content="This website serves as my final project for RLST 1501 @ Fairfield University. It provides an answer my moral question in a simple, straightforward and interactive way.">
+  
+  <!-- Styles & Scripts (Minified) -->
+  
+  <link rel="stylesheet" href="Explorer/Out/Styles/Main.min.css">
+  <script type="module" src="Explorer/Out/Scripts/Main.js"></script> 
+
+  <!-- IonIcons -->
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
+  
+  <!-- Adobe Fonts -->
+
+  <link rel="stylesheet" href="https://use.typekit.net/pge8obf.css">
+
+</head>
+
+<body>
+
+  <div class="Content">
+
+    <!-- Absolute/External Elements -->
+
+    <div class="AmbientBackdropDiffuser"></div>
+    <div class="AmbientBackdrop" style="display: none;"></div>
+
+    <!-- Wrapper for Question & Response -->
+    
+    <div class="Container VerticalFlex Center Full Transparent QuestionAndResponse">
+
+      <div class="Container Transparent NoPadding Question">
+
+
+      </div>
+
+      <div class="Container Transparent NoPadding Response">
+
+
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+
+    <div class="Line HighlightSeperator" style="display: none;"></div>
+
+    <!-- Response Highlight Pop-In -->
+
+    <div class="Container VerticalFlex Center Transparent ResponseHighlightPopIn" style="display: none;">
+
+      <div class="Container Transparent NoPadding ResponseHighlight">
+
+          <!-- Placeholder... overwritten by Scripts/Sections/Highlight.ts -->
+
+          <div class="Container Transparent HorizontalFlex NoPadding ResponseHighlightPlaceholder">
+
+              <ion-icon name="search"></ion-icon>
+
+              <!-- On Mobile, .ResponseHighlightPlaceholderAction will be updated to use "tap" -->
+
+              <div class="ResponseHighlightPlaceholderText"><span class="ResponseHighlightPlaceholderAction">Hover and click </span> on a phrase to learn more about it.</div>
+
+          </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{
+
+    "GinMode": "release",
+
+    "ServiceUID": "",
+
+    "Server": {
+
+        "Port": 10000
+
+    },
+
+    "Database": {
+          
+    },
+
+    "Versions": {
+
+        "Server": "1.0.0",
+        "Frontend": "1.0.0"
+
+    }
+
+}

@@ -1,0 +1,27 @@
+.Container.ResponseHighlightPopIn {
+
+    width: 100%;
+    font-size: $FontSizeMedium;
+
+    text-align: center;
+
+    gap: $SpacingLarge;
+
+}
+
+// Placeholder 
+
+.Container.ResponseHighlightPlaceholder {
+
+    gap: $SpacingSmall;
+
+    font-size: $FontSizeSmall;
+    text-align: left;
+
+}
+
+.Container.ResponseHighlightPlaceholder ion-icon {
+
+    font-size: $FontSizeMedium * 1.5;
+    
+}

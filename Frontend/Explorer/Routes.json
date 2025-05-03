@@ -1,0 +1,29 @@
+{
+    "Base": {
+
+        "Method": "GET",
+        "Path": "/Ethics/Explorer",
+
+        "RateLimitConfig": null
+
+    },
+
+    "APIBase": {
+
+        "Method": "GET",
+        "Path": "/API/",
+
+        "RateLimitConfig": null
+
+    },
+
+    "Report": {
+
+        "Method": "POST",
+        "Path": "/API/Report",
+
+        "RateLimitConfig": null
+
+    }
+
+}

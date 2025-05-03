@@ -1,0 +1,15 @@
+{
+  "name": "explorer-frontend",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.5.32",
+    "jquery": "4.0.0-beta.2"
+  }
+}

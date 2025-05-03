@@ -1,0 +1,11 @@
+.Container.QuestionAndResponse {
+
+    text-align: center;
+
+    gap: $SpacingMedium;
+    
+    height: fit-content;
+
+    transition: all $TransitionTime ease-in-out;
+
+}
