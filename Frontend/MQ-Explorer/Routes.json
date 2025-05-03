@@ -2,7 +2,7 @@
     "Base": {
 
         "Method": "GET",
-        "Path": "/Ethics/Explorer",
+        "Path": "/Moral-Question-Explorer",
 
         "RateLimitConfig": null
 

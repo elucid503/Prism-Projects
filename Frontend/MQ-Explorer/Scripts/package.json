@@ -1,5 +1,5 @@
 {
-  "name": "explorer-frontend",
+  "name": "mq-explorer-frontend",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {

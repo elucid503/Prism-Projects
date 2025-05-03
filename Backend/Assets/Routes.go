@@ -26,7 +26,7 @@ func GetRoutes() map[string]RouteInfo {
 
 	return map[string]RouteInfo{
 
-		"/Explorer": {
+		"/Moral-Question-Explorer": {
 
 			Method:  "GET",
 			Handler: GlobalRoutes.Explorer,
