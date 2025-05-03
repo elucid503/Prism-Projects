@@ -8,6 +8,6 @@ func Explorer(GinContext *gin.Context) {
 
 	// Returns the frontend page
 
-	GinContext.File("../Frontend/Explorer/Pages/Main.html")
+	GinContext.File("../Frontend/MQ-Explorer/Pages/Main.html")
 
 }
