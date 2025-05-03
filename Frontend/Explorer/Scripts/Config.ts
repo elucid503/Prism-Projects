@@ -14,8 +14,8 @@ const Templates = {
 
     References: {
 
-        WhatIsGoingOn: `<a href="/Assets/What_Is_Going_On.pdf" target="_blank">What Is Going On?</a>`,
-        WhatShouldBeDone: `<a href="/Assets/What_Should_Be_Done.pdf" target="_blank">What Should Be Done?</a>`,
+        WhatIsGoingOn: `<a href="Explorer/Assets/What_Is_Going_On.pdf" target="_blank">What Is Going On?</a>`,
+        WhatShouldBeDone: `<a href="Explorer/Assets/What_Should_Be_Done.pdf" target="_blank">What Should Be Done?</a>`,
         
     }
     
