@@ -3,7 +3,6 @@ import type { Storage } from "./Misc/Structs";
 
 import { Log, WatchCache } from "./Misc/Utils";
 
-import { FadeInBody } from "./Sections/Body";
 import { InitiateQandA } from "./Sections/Q&A";
 import { InitiateHighlightPlaceholder } from "./Sections/Highlight";
 
@@ -22,7 +21,6 @@ export const GlobalStorage: Storage = {
 
 WatchCache();
 
-FadeInBody(); // must be ran before InitiateQandA since there's an element positiong thing that occurs in there
 InitiateQandA();
 InitiateHighlightPlaceholder();
 

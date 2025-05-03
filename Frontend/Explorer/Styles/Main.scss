@@ -60,15 +60,7 @@ $TransitionTime: 0.1s;
 
 // Body 
 
-html {
-
-    background-color: $BackgroundColor;
-
-}
-
 body {
-
-    display: none; // MUST be updated
 
     height: 100vh;
     align-content: center;
@@ -79,6 +71,7 @@ body {
 
     line-height: 1.75;
 
+    background-color: $BackgroundColor;
     color: $FontColor;
 
     margin: 0;
