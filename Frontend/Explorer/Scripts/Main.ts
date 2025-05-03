@@ -1,7 +1,7 @@
 
 import type { Storage } from "./Misc/Structs";
 
-import { Log, LogToBackend, WatchCache } from "./Misc/Utils";
+import { Log, WatchCache } from "./Misc/Utils";
 
 import { FadeInBody } from "./Sections/Body";
 import { InitiateQandA } from "./Sections/Q&A";
