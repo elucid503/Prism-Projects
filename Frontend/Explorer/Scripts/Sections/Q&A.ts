@@ -59,8 +59,6 @@ export function InitiateQandA() {
 
     CalculateAndSetHeight();
 
-    $(window).on("resize", CalculateAndSetHeight); // Also bind to resize here since we're only calling this once, and its good UX to have it
-
     // Set the body to the top to avoid scroll problems 
 
     document.scrollingElement?.scrollTo(0, 0);
@@ -87,6 +85,10 @@ export function InitiateQandA() {
     const LastPhraseDelay = (LastPhrase.index() * AnswerFadeConfig.Delay) + AnimationTimes.Short;
 
     setTimeout(async () => {
+
+        // Reset the height to auto so it can expand
+
+        RelevantElements.Response.css("height", "auto");
 
         // Show next section after a bit more of a delay
 
