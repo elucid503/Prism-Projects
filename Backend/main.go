@@ -64,6 +64,12 @@ func main() {
 	GinRouter.Static("/Moral-Question-Explorer/Assets", "../Frontend/MQ-Explorer/Assets")
 	GinRouter.Static("/Moral-Question-Explorer/Styles", "../Frontend/MQ-Explorer/Styles") // for maps back to SCSS
 
+	// "Portfolio Site"
+
+	GinRouter.Static("/Out", "../Frontend/Portfolio/Out")
+	GinRouter.Static("/Assets", "../Frontend/Portfolio/Assets")
+	GinRouter.Static("/Styles", "../Frontend/Portfolio/Styles") // for maps back to SCSS
+
 	Functions.Log(Logs.LogLevelInfo, "Server", fmt.Sprintf("Listening on port %d...", Config.Server.Port))
 
 	GinRouter.Run(fmt.Sprintf(":%d", Config.Server.Port))

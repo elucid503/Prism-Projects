@@ -1,0 +1,114 @@
+.Container.ProjectCardsContainer {
+
+    gap: $SpacingMedium;
+    align-items: start;
+
+}
+
+.Container.ProjectCardsContainer .ProjectCardsTitle {
+
+    align-items: start;
+
+    font-size: $FontSizeLarge * 1.25;
+    font-weight: 700;
+
+    gap: $SpacingSmall * 0.25;
+
+    @include RespondTo("Mobile") {
+
+        align-items: center;
+        text-align: center;
+
+    }
+
+}
+
+.Container.ProjectCardsContainer .ProjectCardsTitle .Subtitle {
+
+    font-size: $FontSizeMedium * 0.90;
+    font-weight: 400;
+
+    color: $FontColorMuted;
+
+}
+
+.Container.ProjectCardsContainer .ProjectCards {
+
+    // 2x2 grid on desktop
+
+    display: grid;
+    width: 100%;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    gap: $SpacingMedium;
+
+    @include RespondTo("Tablet") {
+
+        // 1x1 grid on tablet
+
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+
+        gap: $SpacingMedium * 0.65;
+
+    }
+
+}
+
+.Container.ProjectCard {
+
+    position: relative;
+    overflow: hidden;
+
+    justify-content: space-between;
+    gap: $SpacingSmall;
+
+    @include RespondTo("Mobile") {
+
+        .ProjectCardIcon {
+
+            position: absolute;
+            right: $SpacingMedium;
+
+            scale: 3.25;
+            opacity: 0.1;
+            z-index: -1;
+            
+        }
+
+    }
+
+}
+
+.Container.ProjectCardText {
+
+    align-items: start;
+
+    gap: $SpacingSmall;
+
+}
+
+.Container.ProjectCardTitle {
+
+    font-size: $FontSizeLarge;
+    font-weight: 700;
+
+}
+
+.Container.ProjectCardDescription {
+
+    font-size: $FontSizeMedium;
+    color: $FontColorMuted;
+
+}
+
+.Container.ProjectCardIcon ion-icon {
+
+    font-size: $FontSizeLargest * 2.5;
+    color: $FontColorMuted;
+
+    opacity: 0.5;
+        
+}

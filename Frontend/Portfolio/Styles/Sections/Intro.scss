@@ -1,0 +1,45 @@
+.Container.IntroContainer {
+
+    gap: $SpacingMedium;
+    align-items: start;
+
+    @include RespondTo("Mobile") {
+
+        align-items: center;
+        text-align: center;
+
+    }
+
+}
+
+.Container.IntroTitle {
+
+    align-items: start;
+
+    font-size: $FontSizeLarge * 1.5;
+    font-weight: 700;
+
+    @include RespondTo("Mobile") {
+
+        align-items: center;
+        text-align: center;
+
+    }
+
+}
+
+.IntroTitle.Subtitle {
+
+    font-size: $FontSizeLarge;
+    color: $FontColorMuted;
+
+    font-weight: normal;
+
+}
+
+.Container.IntroDescription {
+
+    line-height: 1.1;
+    font-size: $FontSizeMedium;
+
+}

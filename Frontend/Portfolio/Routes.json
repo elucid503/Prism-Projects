@@ -1,0 +1,20 @@
+{
+    "Base": {
+
+        "Method": "GET",
+        "Path": "/",
+
+        "RateLimitConfig": null
+
+    },
+
+    "APIBase": {
+
+        "Method": "GET",
+        "Path": "/API/",
+
+        "RateLimitConfig": null
+
+    }
+
+}

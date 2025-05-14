@@ -1,0 +1,78 @@
+.Container.FeaturedImageContainer {
+
+    position: relative;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 400px;
+    width: 100%;
+
+}
+
+.Container.FeaturedImageInfo {
+
+    position: absolute;
+    align-items: start;
+    
+    bottom: $SpacingMedium;
+    left: $SpacingMedium;
+
+    gap: $SpacingSmall * 0.8;
+
+    // more blur needed
+
+    backdrop-filter: blur(5rem);
+    -webkit-backdrop-filter: blur(5rem);
+
+    background-color: rgba(20, 20, 20, 0.65);
+
+    @include RespondTo("Mobile") {
+
+        transform: scale(0.9);
+
+        bottom: $SpacingSmall * 0.5; // just works...
+        left: 0;
+        
+    }
+
+}
+
+.Container.FeaturedImageInfoMeta {
+
+    gap: $SpacingMedium;
+
+}
+
+.Container.FeaturedImageMetaItem {
+
+    gap: $SpacingSmall;
+
+}
+
+.FeaturedImageInfoTitle {
+
+    font-size: $FontSizeLarge;
+    
+}
+
+.FeaturedImageBackdrop {
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    filter: blur(5rem);
+    -webkit-filter: blur(5rem);
+
+    transform: translateY(5rem);
+    opacity: 0.75;
+
+    z-index: -1;
+
+}

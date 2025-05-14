@@ -1,0 +1,49 @@
+// Reusable Elements 
+
+.Container {
+
+    @include Container();
+
+}
+
+.Container.NoPadding {
+
+    padding: 0 !important;
+    
+}
+
+.Container.HorizontalFlex {
+    
+    @include FlexHorizontal();
+
+}
+
+.Container.VerticalFlex {
+
+    @include FlexVertical();
+
+}
+
+.Container.Center {
+
+    @include FlexCenter();
+
+}
+
+.Container.Transparent {
+
+    @include TransparentContainerMod();
+
+}
+
+.Container.Glass {
+
+    @include GlassBackground();
+
+}
+
+.Container.Full {
+
+    @include FullWidthAndHeight();
+
+}

@@ -26,6 +26,15 @@ func GetRoutes() map[string]RouteInfo {
 
 	return map[string]RouteInfo{
 
+		"/": {
+
+			Method:  "GET",
+			Handler: GlobalRoutes.Portfolio,
+
+			RateLimitConfig: nil,
+
+		},
+
 		"/Moral-Question-Explorer": {
 
 			Method:  "GET",
