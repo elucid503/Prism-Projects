@@ -1,0 +1,92 @@
+.Container.ExperienceTimeline {
+
+    align-items: start;
+
+    margin-bottom: $SpacingMedium; // TODO: Remove
+
+}
+
+.Container.ExperienceTimelineTitle {
+
+    @include SectionTitle();
+
+    margin-bottom: $SpacingMedium * 0.5;
+
+} 
+
+.Container.ExperienceTimelineNodes {
+
+    align-items: start;
+    padding: $SpacingLarge;
+
+}
+
+.Container.ExperienceTimelineNode {
+
+    gap: $SpacingMedium;
+    
+}
+
+.Container.ExperienceTimelineNodeInfo {
+
+    align-items: flex-start;
+
+}
+
+.ExperienceTimelineNodeInfo.Title {
+
+    font-size: $FontSizeLarge;
+    font-weight: 700;
+
+    margin-bottom: $SpacingSmall * 0.25;
+
+}
+
+.ExperienceTimelineNodeInfo.Time {
+
+    font-size: $FontSizeSmall * 1.15;
+    color: $FontColorMuted;
+
+    margin-bottom: $SpacingSmall;
+
+}
+
+.ExperienceTimelineNodeInfo.Description {
+
+    font-size: $FontSizeMedium;
+
+}
+
+.Container.ExperienceTimelineNodeBubble {
+                        
+    font-size: $FontSizeLarge * 1.75;
+    margin-right: $SpacingMedium;
+
+    opacity: 0.5;
+
+}
+
+.ExperienceTimelineLine {
+
+    height: 75px;
+
+    width: 2px;
+
+    opacity: 0.5;
+
+    background-color: $FontColorMuted;
+
+    border-radius: $BorderRadiusSmall;
+
+    margin-left: calc((($FontSizeLarge * 1.75) / 2) - 1px); // 1/2 of the width of the icon (font size) and -1px for 1/2 the width of the line
+    
+    @include RespondTo("Mobile") {
+
+        margin-top: -50px;
+        margin-bottom: -50px;
+
+        height: 150px;
+
+    }
+
+}

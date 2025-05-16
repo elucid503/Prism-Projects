@@ -7,30 +7,10 @@
 
 .Container.ProjectCardsContainer .ProjectCardsTitle {
 
-    align-items: start;
-
-    font-size: $FontSizeLarge * 1.25;
-    font-weight: 700;
-
-    gap: $SpacingSmall * 0.25;
-
-    @include RespondTo("Mobile") {
-
-        align-items: center;
-        text-align: center;
-
-    }
+    @include SectionTitle();
 
 }
 
-.Container.ProjectCardsContainer .ProjectCardsTitle .Subtitle {
-
-    font-size: $FontSizeMedium * 0.90;
-    font-weight: 400;
-
-    color: $FontColorMuted;
-
-}
 
 .Container.ProjectCardsContainer .ProjectCards {
 

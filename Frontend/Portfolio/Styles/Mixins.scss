@@ -94,3 +94,36 @@
     }
     
 }
+
+// Other 
+
+@mixin SectionTitle() {
+
+    // this assumes the container is already flexed
+
+    align-items: start;
+
+    font-size: $FontSizeLarge * 1.25;
+    font-weight: 700;
+
+    gap: $SpacingSmall * 0.25;
+
+    span.Subtitle {
+
+        // for if a subtitle is within
+
+        font-size: $FontSizeMedium * 0.90;
+        font-weight: 400;
+
+        color: $FontColorMuted;
+
+    }
+
+    @include RespondTo("Mobile") {
+
+        align-items: center;
+        text-align: center;
+
+    }
+
+}
