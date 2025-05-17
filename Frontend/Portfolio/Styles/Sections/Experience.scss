@@ -134,7 +134,7 @@
     opacity: 0.0875;
     z-index: -1;
 
-    @include RespondTo("Mobile") {
+    @include RespondTo("Tablet") {
 
         display: none;
 
