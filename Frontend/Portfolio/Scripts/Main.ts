@@ -3,6 +3,7 @@ import { WatchCache } from "./Misc/Utils";
 
 import { HandleFeaturedSection } from "./Sections/Featured";
 import { HandleProjectCards } from "./Sections/Projects";
+import { HandleExperienceTimeline } from "./Sections/Experience";
 
 export const GlobalStorage: Storage = {
 
@@ -23,3 +24,4 @@ WatchCache();
 
 HandleFeaturedSection();
 HandleProjectCards();
+HandleExperienceTimeline();

@@ -38,7 +38,7 @@ export function GenerateProjectCard(Data: ProjectCard): string {
 
             <div class="Container Center NoPadding Transparent ProjectCardIcon">
 
-                <ion-icon name="${Data.Icon}"></ion-icon>
+                <ion-icon name="${Data.IconName}"></ion-icon>
             
             </div>
 

@@ -1,5 +1,7 @@
 // Featured Section
 
+import type { ExperienceTimelineNode } from "./Sections/Experience";
+
 export type FeaturedImage = { ImageURL: string, Title: string, Meta: { Date: string, Location: string } };
 
 export const FeaturedImages: FeaturedImage[] = [
@@ -75,7 +77,7 @@ export type ProjectCard = {
 
     Title: string,
     Description: string,
-    Icon: string
+    IconName: string
 
 }
 
@@ -85,7 +87,7 @@ export const ProjectCards: ProjectCard[] = [
 
         Title: "Project Title 1",
         Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        Icon: "albums-outline"
+        IconName: "musical-notes-outline"
 
     },
 
@@ -93,7 +95,7 @@ export const ProjectCards: ProjectCard[] = [
 
         Title: "Project Title 2",
         Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        Icon: "albums-outline"
+        IconName: "globe-outline"
 
     },
 
@@ -101,7 +103,7 @@ export const ProjectCards: ProjectCard[] = [
 
         Title: "Project Title 3",
         Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        Icon: "albums-outline"
+        IconName: "document-outline"
 
     },
 
@@ -109,7 +111,44 @@ export const ProjectCards: ProjectCard[] = [
 
         Title: "Project Title 4",
         Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        Icon: "albums-outline"
+        IconName: "albums-outline"
+
+    }
+
+]
+
+export const ExperienceTimelineNodes: ExperienceTimelineNode[] = [
+
+    {
+
+        IconName: `laptop-outline`,
+
+        Title: "Software Engineer",
+        Time: "2023 - Present",
+
+        Description: "Working on various projects using modern web technologies."
+
+    },
+
+    {
+
+        IconName: `school-outline`,
+
+        Title: "Computer Science Student",
+        Time: "2020 - 2023",
+
+        Description: "Studied computer science with a focus on software development."
+
+    },
+
+    {
+
+        IconName: `briefcase-outline`,
+
+        Title: "Internship at Tech Company",
+        Time: "Summer 2022",
+
+        Description: "Gained practical experience in software development and teamwork."
 
     }
 

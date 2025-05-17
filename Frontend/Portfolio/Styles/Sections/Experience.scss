@@ -1,18 +1,28 @@
+// Container
+
 .Container.ExperienceTimeline {
+
+    position: relative;
 
     align-items: start;
 
     margin-bottom: $SpacingMedium; // TODO: Remove
 
+    overflow: hidden; // needed for underlay
+
 }
+
+// Title Area
 
 .Container.ExperienceTimelineTitle {
 
     @include SectionTitle();
 
-    margin-bottom: $SpacingMedium;
+    margin-bottom: $SpacingSmall;
 
 } 
+
+// Container for Nodes/Lines
 
 .Container.ExperienceTimelineNodes {
 
@@ -28,6 +38,8 @@
 
 }
 
+// Node 
+
 .Container.ExperienceTimelineNode {
 
     gap: $SpacingMedium;
@@ -39,6 +51,8 @@
     align-items: flex-start;
 
 }
+
+// Node Title/Subtitle/Whatever
 
 .ExperienceTimelineNodeInfo.Title {
 
@@ -64,6 +78,8 @@
 
 }
 
+// Node Icon/"Bubble" Area
+
 .Container.ExperienceTimelineNodeBubble {
                         
     font-size: $FontSizeLarge * 1.75;
@@ -72,6 +88,8 @@
     opacity: 0.5;
 
 }
+
+// Line
 
 .ExperienceTimelineLine {
 
@@ -95,5 +113,31 @@
         height: 150px;
 
     }
+
+}
+
+// Top-Level Container Underlay 
+
+.ExperienceTimelineDesktopUnderlay {
+
+    position: absolute;
+    
+    // Right center of element
+    
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    font-size: 50rem;
+    color: $FontColorMuted;
+
+    opacity: 0.0875;
+    z-index: -1;
+
+    @include RespondTo("Mobile") {
+
+        display: none;
+
+    }   
 
 }
