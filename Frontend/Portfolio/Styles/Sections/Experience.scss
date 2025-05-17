@@ -10,14 +10,21 @@
 
     @include SectionTitle();
 
-    margin-bottom: $SpacingMedium * 0.5;
+    margin-bottom: $SpacingMedium;
 
 } 
 
 .Container.ExperienceTimelineNodes {
 
     align-items: start;
-    padding: $SpacingLarge;
+    width: 100%;
+
+    @include RespondTo("Mobile") {
+
+        padding: $SpacingSmall;
+        padding-right: 0;
+        
+    }
 
 }
 
@@ -78,7 +85,7 @@
 
     border-radius: $BorderRadiusSmall;
 
-    margin-left: calc((($FontSizeLarge * 1.75) / 2) - 1px); // 1/2 of the width of the icon (font size) and -1px for 1/2 the width of the line
+    margin-left: calc(($FontSizeLarge * 1.75 / 2) - 1px); // 1/2 of the width of the icon (font size) and -1px for 1/2 the width of the line
     
     @include RespondTo("Mobile") {
 
