@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-import { ExperienceTimelineNodes } from "../Content";
+import { ExperienceTimelineNodes, type ExperienceTimelineNode } from "../Content";
 
 import { AnimationTimes } from "../Misc/Structs";
 
@@ -17,17 +17,6 @@ const RelevantElements = {
 const ElementTemplates = {
 
     Line: `<div class="ExperienceTimelineLine"></div>`
-
-}
-
-export interface ExperienceTimelineNode {
-
-    IconName: string;
-
-    Title: string;
-    Time: string;
-
-    Description?: string;
 
 }
 

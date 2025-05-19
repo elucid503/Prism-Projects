@@ -1,31 +1,14 @@
 // Featured Section
 
-import type { ExperienceTimelineNode } from "./Sections/Experience";
-
 export type FeaturedImage = { ImageURL: string, Title: string, Meta: { Date: string, Location: string } };
 
 export const FeaturedImages: FeaturedImage[] = [
 
     {
 
-        ImageURL: "https://cdn.sprout.software/Files/paul/Photos/NY-4-20/cherry1.JPG",
+        ImageURL: "https://cdn.sprout.software/Files/Sprout/Hosting/PFotos/Med/015.webp",
 
-        Title: "Cherry Blossoms",
-
-        Meta: {
-
-            Date: "April 2025",
-            Location: "New York, NY"
-
-        },
-
-    },
-
-    {
-
-        ImageURL: "https://cdn.sprout.software/Files/paul/Photos/NY-4-20/apple1.JPG",
-
-        Title: "Apple Tree",
+        Title: "Blue Blossoms",
 
         Meta: {
 
@@ -38,14 +21,14 @@ export const FeaturedImages: FeaturedImage[] = [
 
     {
 
-        ImageURL: "https://cdn.sprout.software/Files/paul/Photos/FF-4-28/fountain_near.JPG",
+        ImageURL: "https://cdn.sprout.software/Files/Sprout/Hosting/PFotos/Med/024.webp",
 
-        Title: "Rainbow",
+        Title: "Foreground Flowers",
 
         Meta: {
 
-            Date: "April 2025",
-            Location: "Fairfield CT"
+            Date: "May 2025",
+            Location: "Fairfield, CT"
 
         },
 
@@ -53,14 +36,14 @@ export const FeaturedImages: FeaturedImage[] = [
 
     {
 
-        ImageURL: "https://cdn.sprout.software/Files/paul/Photos/FF-4-28/turkey.JPG",
+        ImageURL: "https://cdn.sprout.software/Files/Sprout/Hosting/PFotos/Med/025.webp",
 
-        Title: "Turkey",
+        Title: "Sunlight Branches",
 
         Meta: {
 
-            Date: "April 2025",
-            Location: "Fairfield CT"
+            Date: "May 2025",
+            Location: "Fairfield, CT"
 
         },
 
@@ -117,6 +100,17 @@ export const ProjectCards: ProjectCard[] = [
 
 ]
 
+export type ExperienceTimelineNode = {
+
+    IconName: string;
+
+    Title: string;
+    Time: string;
+
+    Description?: string;
+
+}
+
 export const ExperienceTimelineNodes: ExperienceTimelineNode[] = [
 
     {
@@ -153,3 +147,215 @@ export const ExperienceTimelineNodes: ExperienceTimelineNode[] = [
     }
 
 ]
+
+export type MasonryPhoto = {
+
+    Enum: string;
+
+    URLs: {
+
+        SmallScaled: string;
+
+        Small: string;
+        Medium: string;
+        Large: string;
+
+    }
+
+    Title: string;
+
+}
+
+// MasonryPhotosEnums contains an array of photos along with their enum and title.
+// The enum can be used to predictably get the other URLs.
+
+export const MasonryPhotosEnums: Partial<MasonryPhoto>[] = [
+
+    {
+
+        Enum: "000",
+        Title: "Fall Hills"
+
+    },
+
+    {
+
+        Enum: "001",
+        Title: "Geese"
+
+    },
+
+    {
+
+        Enum: "002",
+        Title: "Snowfall"
+
+    },
+
+    {
+
+        Enum: "003",
+        Title: "Barren Tree"
+
+    },
+
+    {
+
+        Enum: "004",
+        Title: "Winter Hills"
+
+    },
+
+    {
+
+        Enum: "005",
+        Title: "Flower & Grass"
+
+    },
+
+    {
+
+        Enum: "006",
+        Title: "Evening Light"
+
+    },
+
+    {
+
+        Enum: "007",
+        Title: "Spring, Sprung"
+
+    },
+    
+    {
+
+        Enum: "008",
+        Title: "Full of Daffodils"
+
+    },
+
+    {
+
+        Enum: "009",
+        Title: "Sunset Blossoms"
+
+    },
+
+    {
+
+        Enum: "010",
+        Title: "Parking Lot Sunset"
+
+    },
+
+    {
+
+        Enum: "012",
+        Title: "Rainbow Refraction"
+
+    },
+
+    {
+
+        Enum: "013",
+        Title: "Turkey"
+
+    },
+
+    {  
+            
+        Enum: "022", // out of order for a reason...
+        Title: "Barnyard"
+
+    },
+
+    {
+
+        Enum: "014",
+        Title: "Spring Light"
+
+    },
+
+    {  
+
+        Enum: "015",
+        Title: "Blue Blossoms"
+
+    },
+
+    {  
+
+        Enum: "016",
+        Title: "Disc Golf"
+
+    },
+
+    {  
+
+        Enum: "017",
+        Title: "Flying Out of Focus"
+
+    },
+
+    {  
+
+        Enum: "018",
+        Title: "Conversing"
+
+    },
+
+    {  
+
+        Enum: "019",
+        Title: "Autumn Leaves"
+
+    },
+
+    {  
+
+        Enum: "020",
+        Title: "Autumn Tree"
+
+    },
+
+    {  
+
+        Enum: "021",
+        Title: "Red and Yellow"
+
+    },
+
+    {  
+
+        Enum: "023", // added later
+        Title: "Reflections"
+
+    },
+
+    {
+
+        Enum: "011", // this one looks better last.
+        Title: "Sunset Hills"
+
+    },
+
+
+]
+
+export const MasonryPhotos: MasonryPhoto[] = MasonryPhotosEnums.map(Photo => ({
+
+    Enum: Photo.Enum!,
+
+    URLs: {
+
+        SmallScaled: `https://cdn.sprout.software/Files/Sprout/Hosting/PFotos/Small/${Photo.Enum}_scaled.webp`,
+
+        Small: `https://cdn.sprout.software/Files/Sprout/Hosting/PFotos/Small/${Photo.Enum}.webp`,
+        Medium: `https://cdn.sprout.software/Files/Sprout/Hosting/PFotos/Medium/${Photo.Enum}.webp`,
+        Large: `https://cdn.sprout.software/Files/Sprout/Hosting/PFotos/Large/${Photo.Enum}.webp`
+
+    },
+
+    Title: Photo.Title!
+
+}));

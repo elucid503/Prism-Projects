@@ -22,26 +22,32 @@ const RelevantElements = {
 
 const RelevantStates = {
 
-    LastFeaturedImage: null as FeaturedImage | null,
-    NextFeaturedImage: null as FeaturedImage | null
+    LastFeaturedImageIndex: -1
 
 }
 
-function GetAndLoadRandomImage(): FeaturedImage {
+function GetNextImage(): FeaturedImage {
 
-    const RandomImage = FeaturedImages[Math.floor(Math.random() * FeaturedImages.length)];
+    if (RelevantStates.LastFeaturedImageIndex == -1) {
 
-    if (FeaturedImages.length > 1 && RandomImage === RelevantStates.LastFeaturedImage) {
+        // Start at a random index within the array of FeaturedImages
 
-        return GetAndLoadRandomImage(); // Recursion to avoid the same image being shown twice in a row
+        RelevantStates.LastFeaturedImageIndex = Math.floor(Math.random() * FeaturedImages.length);
 
     }
 
-    const DOMImage = new Image();
-    DOMImage.src = RandomImage.ImageURL;
+    if (RelevantStates.LastFeaturedImageIndex >= FeaturedImages.length) {
 
-    RelevantStates.LastFeaturedImage = RandomImage;
+        // If the index is out of bounds, we reset it to 0
 
+        RelevantStates.LastFeaturedImageIndex = 0;
+
+    }
+
+    const RandomImage = FeaturedImages[RelevantStates.LastFeaturedImageIndex];
+
+    RelevantStates.LastFeaturedImageIndex++; // for next time
+        
     return RandomImage;
 
 }
@@ -59,12 +65,11 @@ export function HandleFeaturedSection(): void {
         });
     });
 
-    UpdateFeaturedSection(GetAndLoadRandomImage());
-    RelevantStates.NextFeaturedImage = GetAndLoadRandomImage();
+    UpdateFeaturedSection(GetNextImage());
 
     setInterval(async () => {
 
-        const NewImage = RelevantStates.NextFeaturedImage || GetAndLoadRandomImage();
+        const NewImage = GetNextImage();
 
         RelevantElements.Container.fadeOut(AnimationTimes.Short, () => {
 
@@ -72,8 +77,6 @@ export function HandleFeaturedSection(): void {
 
             RelevantElements.Container.fadeIn(AnimationTimes.Short);
             
-            RelevantStates.NextFeaturedImage = GetAndLoadRandomImage(); // Preloading the next image
-
         });
     
     }, FeaturedImageUpdateInterval);

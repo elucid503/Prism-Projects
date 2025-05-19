@@ -19,7 +19,7 @@
     bottom: $SpacingMedium;
     left: $SpacingMedium;
 
-    gap: $SpacingSmall * 0.8;
+    gap: $SpacingSmall * 0.75;
 
     // more blur needed
 
@@ -41,13 +41,13 @@
 
 .Container.FeaturedImageInfoMeta {
 
-    gap: $SpacingMedium;
+    gap: $SpacingMedium * 0.5;
 
 }
 
 .Container.FeaturedImageMetaItem {
 
-    gap: $SpacingSmall;
+    gap: $SpacingSmall * 0.5;
 
 }
 

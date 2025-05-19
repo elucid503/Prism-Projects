@@ -1,0 +1,62 @@
+.Container.Photos {
+
+    align-items: start;
+
+    margin-bottom: $SpacingMedium; // TODO: Remove
+    
+}
+
+.Container.PhotosTitle {
+
+    @include SectionTitle;
+
+}
+
+.PhotosMasonry {
+
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: $SpacingSmall;
+    padding: $SpacingLarge 0;
+
+    @include RespondTo("Mobile") {
+
+        gap: $SpacingSmall * 0.5;
+        
+    }
+
+}
+
+.PhotoMasonryItem {
+
+    height: 100%;
+    width: 100%;
+
+    flex-grow: 1;
+    height: 250px;
+    width: auto;
+    
+    border-radius: $BorderRadiusSmall * 1.5;
+
+    overflow: hidden;
+
+    @include RespondTo("Mobile") {
+
+        height: 150px;
+
+    }
+        
+
+}
+
+.PhotoMasonryItem img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+}
