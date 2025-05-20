@@ -22,7 +22,9 @@ const RelevantElements = {
 
 const RelevantStates = {
 
-    LastFeaturedImageIndex: -1
+    LastFeaturedImageIndex: -1,
+    
+    IsMobile: window.innerWidth < 768
 
 }
 
@@ -71,13 +73,23 @@ export function HandleFeaturedSection(): void {
 
         const NewImage = GetNextImage();
 
-        RelevantElements.Container.fadeOut(AnimationTimes.Short, () => {
+        if (RelevantStates.IsMobile) {
 
-            UpdateFeaturedSection(NewImage);
+            // We will skip the animation to avoid webkit bugs (ugh)
 
-            RelevantElements.Container.fadeIn(AnimationTimes.Short);
+            UpdateFeaturedSection(NewImage)
+
+        } else {
+
+            RelevantElements.Container.fadeOut(AnimationTimes.Short, () => {
+
+                UpdateFeaturedSection(NewImage);
+
+                RelevantElements.Container.fadeIn(AnimationTimes.Short);
             
-        });
+            });
+            
+        }
     
     }, FeaturedImageUpdateInterval);
 
