@@ -85,11 +85,11 @@
 
 .FooterUnderlay {
 
-    @include SectionUnderlay;
-
     font-size: 25rem; // smaller underlay here
     margin-right: 2.5rem; // needed due to smaller size
 
     scale: 1.5;
+
+    @include SectionUnderlay;
 
 }

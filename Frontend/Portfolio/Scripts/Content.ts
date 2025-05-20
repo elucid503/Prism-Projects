@@ -68,33 +68,33 @@ export const ProjectCards: ProjectCard[] = [
 
     {
 
-        Title: "Project Title 1",
-        Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        Title: "Synthara For Web",
+        Description: "A fully-featured music app, built from the ground up.",
         IconName: "musical-notes-outline"
 
     },
 
     {
 
-        Title: "Project Title 2",
-        Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        IconName: "globe-outline"
+        Title: "Synthara for Discord",
+        Description: "A popular, fast,and reliable music bot on the Discord chat app.",
+        IconName: "musical-note-outline"
 
     },
 
     {
 
-        Title: "Project Title 3",
-        Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        IconName: "document-outline"
+        Title: "Sprout",
+        Description: "A startup backed by its own web services, account system and more.",
+        IconName: "cloud-outline"
 
     },
 
     {
 
-        Title: "Project Title 4",
-        Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        IconName: "albums-outline"
+        Title: "Prism",
+        Description: "A codebase for elegant web apps, built in Go and modern TypeScript.",
+        IconName: "prism-outline"
 
     }
 
@@ -115,12 +115,34 @@ export const ExperienceTimelineNodes: ExperienceTimelineNode[] = [
 
     {
 
-        IconName: `laptop-outline`,
+        IconName: `prism-outline`,
 
-        Title: "Software Engineer",
-        Time: "2023 - Present",
+        Title: "Building New Apps",
+        Time: "Fall 2024 - Current",
 
-        Description: "Working on various projects using modern web technologies."
+        Description: "Using the Prism codebase, I created a CDN and in-house Logging Relay for <a href='https://sprout.software' target='_blank'>Sprout</a>."
+
+    },
+
+    {
+
+        IconName: `musical-notes-outline`,
+
+        Title: "Created Synthara",
+        Time: "Summer 2024",
+
+        Description: "I independently developed my own music app over the course of six months."
+
+    },
+
+    {
+
+        IconName: `rocket-outline`,
+
+        Title: "Created Sprout",
+        Time: "Winter 2023",
+
+        Description: "I created Sprout and the Sprout Account system for the benefit of my future projects."
 
     },
 
@@ -129,20 +151,20 @@ export const ExperienceTimelineNodes: ExperienceTimelineNode[] = [
         IconName: `school-outline`,
 
         Title: "Computer Science Student",
-        Time: "2020 - 2023",
+        Time: "2023 - Current",
 
-        Description: "Studied computer science with a focus on software development."
+        Description: "I'm studying software engineering and mathematics at Fairfield University."
 
     },
 
     {
 
-        IconName: `briefcase-outline`,
+        IconName: `image-outline`,
 
-        Title: "Internship at Tech Company",
-        Time: "Summer 2022",
+        Title: "Performing Arts Website",
+        Time: "Fall 2022",
 
-        Description: "Gained practical experience in software development and teamwork."
+        Description: "I created an image hosting site for my high school's Performing Arts program."
 
     }
 

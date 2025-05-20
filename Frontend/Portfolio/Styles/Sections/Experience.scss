@@ -27,12 +27,14 @@
     align-items: start;
     width: 100%;
 
-    padding-bottom: $SpacingSmall * 0.5;
+    padding-bottom: $SpacingSmall;
 
     @include RespondTo("Mobile") {
 
         padding: $SpacingSmall;
         padding-right: 0;
+
+        padding-bottom: $SpacingSmall * 0.75;
         
     }
 
@@ -43,6 +45,12 @@
 .Container.ExperienceTimelineNode {
 
     gap: $SpacingMedium;
+
+    @include RespondTo("Mobile") {
+
+        gap: $SpacingMedium * 0.65;
+        
+    }
     
 }
 
@@ -119,6 +127,11 @@
 // Top-Level Container Underlay 
 
 .ExperienceTimelineDesktopUnderlay {
+
+    top: 30%;
+    left: 65%;
+
+    scale: 1.5;
 
     @include SectionUnderlay();
 
