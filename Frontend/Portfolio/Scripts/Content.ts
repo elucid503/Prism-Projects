@@ -388,3 +388,52 @@ export const MasonryPhotos: MasonryPhoto[] = MasonryPhotosEnums.map(Photo => ({
     Location: Photo.Location! // also same thing...
 
 }));
+
+// Footer Links
+
+export type FooterLink = {
+    
+    Title: string;
+    IconName: string;
+    URL: string;
+
+}
+
+export const FooterLinks: FooterLink[] = [
+
+    {
+        Title: "Personal Email",
+        IconName: "mail",
+        
+        URL: "mailto:me@paulujlaky.com"
+
+    },
+
+    {
+
+        Title: "Business Email",
+        IconName: "mail",
+
+        URL: "mailto:paul@sprout.software"
+
+    },
+
+    {
+
+        Title: "LinkedIn",
+        IconName: "logo-linkedin",
+
+        URL: "https://www.linkedin.com/in/paul-ujlaky-402955228/"
+
+    },
+
+    {
+
+        Title: "GitHub",
+        IconName: "logo-github",
+
+        URL: "https://github.com/elucid503"
+
+    }
+
+]

@@ -1,8 +1,6 @@
 .Container.Photos {
 
     align-items: start;
-
-    margin-bottom: $SpacingMedium; // TODO: Remove
     
 }
 
@@ -45,19 +43,19 @@
 
     overflow: hidden;
 
-    @include RespondTo("Mobile") {
-
-        height: 150px;
-
-    }
-        
-    cursor: pointer;
     transition: all $TransitionTime;
-
+    cursor: pointer;
+        
     &:hover {
 
         filter: brightness(1.1);
         
+    }
+    
+    @include RespondTo("Mobile") {
+
+        height: 150px;
+
     }
 
 }
@@ -134,7 +132,7 @@
 
     position: absolute;
 
-    bottom: $SpacingLarge * 1.25;
+    bottom: $SpacingLarge * 1.5;
 
     width: fit-content;
     margin: auto;
@@ -174,6 +172,12 @@
 
     }
 
+    @include RespondTo("Mobile") {
+
+        bottom: $SpacingLarge * 1.5;
+
+    }
+
 }
 
 .PhotoPopoutImage {
@@ -186,6 +190,6 @@
 
     border-radius: $BorderRadiusLarge;
 
-    margin-bottom: 8.5vh; // For better alignment with the info/buttons on top
+    margin-bottom: 9vh; // For better alignment with the info/buttons on top
     
 }

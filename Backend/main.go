@@ -8,6 +8,7 @@ import (
 
 	"elucid503/Prism/Assets"
 	"elucid503/Prism/Functions"
+	"elucid503/Prism/Routes"
 	"elucid503/Prism/Systems"
 
 	"elucid503/Prism/Middleware"
@@ -17,6 +18,12 @@ import (
 var RouteHandlers = Assets.GetRoutes()
 
 func LoadRoutes(Router *gin.Engine) {
+
+	// First, not found handler
+
+	Router.NoRoute(Routes.NotFound);
+
+	// Now, loading all routes
 
 	for Route, Handler := range RouteHandlers {
 

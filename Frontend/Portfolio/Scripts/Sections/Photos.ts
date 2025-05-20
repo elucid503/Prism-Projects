@@ -3,6 +3,7 @@ import $ from "jquery";
 import { MasonryPhotos, type MasonryPhoto } from "../Content";
 
 import { AnimationTimes } from "../Misc/Structs";
+
 import { Log } from "../Misc/Utils";
 
 const RelevantElements = {
@@ -34,6 +35,7 @@ const RelevantElements = {
 const RelevantStates = {
 
     IsLoading: false,
+    IsMobile: window.innerWidth < 768,
 
 }
 
@@ -57,7 +59,19 @@ export function HandlePhotoMasonry(): void {
 
     RelevantElements.Container.empty();
 
-    for (const MasonryPhoto of MasonryPhotos) {
+    let Photos: MasonryPhoto[] = MasonryPhotos;
+
+    if (RelevantStates.IsMobile) {
+
+        // We will only use half of the photos for the mobile version
+
+        const HalfOfPhotos = Math.floor(MasonryPhotos.length / 2);
+        
+        Photos = Photos.sort(() => Math.random() - 0.5).slice(0, HalfOfPhotos); // shuffled and sliced
+
+    }
+
+    for (const MasonryPhoto of Photos) {
 
         RelevantElements.Container.append(GeneratePhotoMasonryItem(MasonryPhoto));
 

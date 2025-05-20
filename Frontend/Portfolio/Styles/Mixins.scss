@@ -127,3 +127,27 @@
     }
 
 }
+
+@mixin SectionUnderlay() {
+
+    position: absolute;
+    
+    // Right center of element
+    
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    font-size: 50rem;
+    color: $FontColorMuted;
+
+    opacity: 0.0875;
+    z-index: -1;
+
+    @include RespondTo("Tablet") {
+
+        display: none;
+
+    }   
+
+}

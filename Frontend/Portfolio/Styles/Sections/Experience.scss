@@ -14,9 +14,9 @@
 
 .Container.ExperienceTimelineTitle {
 
-    @include SectionTitle();
-
     margin-bottom: $SpacingSmall;
+
+    @include SectionTitle();
 
 } 
 
@@ -27,14 +27,14 @@
     align-items: start;
     width: 100%;
 
+    padding-bottom: $SpacingSmall * 0.5;
+
     @include RespondTo("Mobile") {
 
         padding: $SpacingSmall;
         padding-right: 0;
         
     }
-
-    padding-bottom: $SpacingSmall * 0.5;
 
 }
 
@@ -120,24 +120,6 @@
 
 .ExperienceTimelineDesktopUnderlay {
 
-    position: absolute;
-    
-    // Right center of element
-    
-    right: 0;
-    bottom: 0;
-    top: 0;
-
-    font-size: 50rem;
-    color: $FontColorMuted;
-
-    opacity: 0.0875;
-    z-index: -1;
-
-    @include RespondTo("Tablet") {
-
-        display: none;
-
-    }   
+    @include SectionUnderlay();
 
 }

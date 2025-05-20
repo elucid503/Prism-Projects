@@ -1,0 +1,95 @@
+.Container.Footer {
+
+    align-items: start;
+
+    gap: $SpacingMedium;
+
+    margin-bottom: $SpacingMedium; // Important: this is the last element, so this is needed to maintain the spacing betwen this and the bottom of screen
+
+    overflow: hidden; // needed for underlay
+
+}
+
+.Container.FooterTitle {
+
+    @include SectionTitle;
+
+}
+
+.Container.FooterLinks {
+
+    gap: $SpacingSmall;
+    justify-content: flex-start;
+
+    width: 100%;
+
+    @include RespondTo("Mobile") {
+
+        flex-direction: column;
+
+        .FooterLink {
+
+            width: 100%;
+
+            justify-content: space-between;
+
+        }
+
+    }
+
+}
+
+.FooterLink {
+
+    @include FlexHorizontal;
+    @include GlassBackground;
+    @include Container($SpacingMedium, $BorderRadiusLarge);
+
+    color: $FontColor;
+    text-decoration: none;
+
+    gap: $SpacingMedium;
+
+    cursor: pointer;
+    transition: all $TransitionTime;
+
+    &:hover {
+
+        text-decoration: none;
+
+        background-color: $ElementColorMedium;
+        
+    }
+
+    &:active {
+
+        transform: scale(0.985);
+        
+    }
+
+    ion-icon {
+
+        font-size: 1.5rem;
+        color: $FontColorMuted;
+
+    }
+
+    .FooterLinkText {
+
+        font-size: $FontSizeMedium * 0.85;
+        font-weight: 500;
+
+    }
+    
+}
+
+.FooterUnderlay {
+
+    @include SectionUnderlay;
+
+    font-size: 25rem; // smaller underlay here
+    margin-right: 2.5rem; // needed due to smaller size
+
+    scale: 1.5;
+
+}
