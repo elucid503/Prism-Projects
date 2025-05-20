@@ -52,7 +52,7 @@ export const FeaturedImages: FeaturedImage[] = [
 
 ]
 
-export const FeaturedImageUpdateInterval = 10_000; // 10 seconds
+export const FeaturedImageUpdateInterval = 15_000; // 15 seconds
 
 // Project Cards
 

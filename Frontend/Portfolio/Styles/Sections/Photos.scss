@@ -22,9 +22,11 @@
     gap: $SpacingSmall;
     padding: $SpacingLarge 0;
 
+    padding-bottom: 0;
+
     @include RespondTo("Mobile") {
 
-        gap: $SpacingSmall * 0.5;
+        gap: $SpacingSmall * 0.7;
         
     }
 
