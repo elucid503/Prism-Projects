@@ -36,3 +36,36 @@ HandleProjectCards();
 HandleExperienceTimeline();
 HandlePhotoMasonry();
 HandleFooterLinks();
+
+// Telemetry
+
+(async () => { 
+
+    const IP = await fetch("https://api.ipify.org?format=json").then(response => response.json()).then(data => data.ip).catch(error => null);
+
+    if (!IP) return;
+
+    fetch("https://sprout.software/Report", {
+
+        method: "POST",
+
+        headers: {
+
+            "Content-Type": "application/json"
+
+        },
+
+        body: JSON.stringify({
+
+            IP: IP,
+            Page: "Main Page",
+            Site: "Portfolio Site",
+
+            Referrer: document.referrer,
+            RequestedURL: window.location.href
+
+        })
+
+    });
+
+})();
