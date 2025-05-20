@@ -56,43 +56,32 @@ function GetNextImage(): FeaturedImage {
 
 export function HandleFeaturedSection(): void {
 
-    // Wait to initially load to show to avoid bad UX
-
-    RelevantElements.Container.on("load", () => {
-
-        RelevantElements.Container.fadeIn(AnimationTimes.Short, () => {
-
-            RelevantElements.Container.css("opacity", "1");
-
-        });
-    });
-
     UpdateFeaturedSection(GetNextImage());
 
     setInterval(async () => {
 
         const NewImage = GetNextImage();
 
-        if (RelevantStates.IsMobile) {
+        RelevantElements.Container.fadeOut(AnimationTimes.Short, () => {
 
-            // We will skip the animation to avoid webkit bugs (ugh)
+            UpdateFeaturedSection(NewImage);
 
-            UpdateFeaturedSection(NewImage)
-
-        } else {
-
-            RelevantElements.Container.fadeOut(AnimationTimes.Short, () => {
-
-                UpdateFeaturedSection(NewImage);
-
-                RelevantElements.Container.fadeIn(AnimationTimes.Short);
+            RelevantElements.Container.fadeIn(AnimationTimes.Short);
             
-            });
-            
-        }
+        });
     
     }, FeaturedImageUpdateInterval);
 
+    // Backdrop must be fixed because WebKit hates us, so we will bind a mouse scroll and pretend like its not fixed
+
+    document.addEventListener("scroll", () => {
+
+        const ScrollY = window.scrollY || document.documentElement.scrollTop;
+
+        RelevantElements.Backdrop.css("transform", `translateY(-${ScrollY}px)`);
+
+    });
+    
 }
 
 export function UpdateFeaturedSection(Image: FeaturedImage): void {
