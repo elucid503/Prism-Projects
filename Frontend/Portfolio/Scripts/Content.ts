@@ -164,6 +164,8 @@ export type MasonryPhoto = {
 
     Title: string;
 
+    Location: string;
+
 }
 
 // MasonryPhotosEnums contains an array of photos along with their enum and title.
@@ -174,168 +176,193 @@ export const MasonryPhotosEnums: Partial<MasonryPhoto>[] = [
     {
 
         Enum: "000",
-        Title: "Fall Hills"
+        Title: "Fall Hills",
+        Location: "Fairfield, CT"
 
     },
 
     {
 
         Enum: "001",
-        Title: "Geese"
+        Title: "Geese",
+        Location: "Fairfield, CT"
+
 
     },
 
     {
 
         Enum: "002",
-        Title: "Snowfall"
+        Title: "Snowfall",
+        Location: "Fairfield, CT"
 
     },
 
     {
 
         Enum: "003",
-        Title: "Barren Tree"
+        Title: "Barren Tree",
+        Location: "Fairfield, CT"
 
     },
 
     {
 
         Enum: "004",
-        Title: "Winter Hills"
+        Title: "Winter Hills",
+        Location: "Fairfield, CT"
 
     },
 
     {
 
         Enum: "005",
-        Title: "Flower & Grass"
+        Title: "Flower & Grass",
+        Location: "New York, NY"
 
     },
 
     {
 
         Enum: "006",
-        Title: "Evening Light"
+        Title: "Evening Light",
+        Location: "Fairfield, CT"
 
     },
 
     {
 
         Enum: "007",
-        Title: "Spring, Sprung"
+        Title: "Spring, Sprung",
+        Location: "Fairfield, CT"
 
     },
     
     {
 
         Enum: "008",
-        Title: "Full of Daffodils"
+        Title: "Full of Daffodils",
+        Location: "New York, NY"
 
     },
 
     {
 
         Enum: "009",
-        Title: "Sunset Blossoms"
+        Title: "Sunset Blossoms",
+        Location: "Fairfield, CT"
 
     },
 
     {
 
         Enum: "010",
-        Title: "Parking Lot Sunset"
+        Title: "Parking Lot Sunset",
+        Location: "Fairfield, CT"
 
     },
 
     {
 
         Enum: "012",
-        Title: "Rainbow Refraction"
+        Title: "Rainbow Refraction",
+        Location: "Fairfield, CT"
 
     },
 
     {
 
         Enum: "013",
-        Title: "Turkey"
+        Title: "Turkey",
+        Location: "Fairfield, CT"
 
     },
 
     {  
             
         Enum: "022", // out of order for a reason...
-        Title: "Barnyard"
+        Title: "Barnyard",
+        Location: "Fairfield, CT"
 
     },
 
     {
 
         Enum: "014",
-        Title: "Spring Light"
+        Title: "Spring Light",
+        Location: "Fairfield, CT"
 
     },
 
     {  
 
         Enum: "015",
-        Title: "Blue Blossoms"
+        Title: "Blue Blossoms",
+        Location: "New York, NY"
 
     },
 
     {  
 
         Enum: "016",
-        Title: "Disc Golf"
+        Title: "Disc Golf",
+        Location: "Fairfield, CT"
 
     },
 
     {  
 
         Enum: "017",
-        Title: "Flying Out of Focus"
+        Title: "Flying Out of Focus",
+        Location: "Fairfield, CT"
 
     },
 
     {  
 
         Enum: "018",
-        Title: "Conversing"
+        Title: "Conversing",
+        Location: "Fairfield, CT"
 
     },
 
     {  
 
         Enum: "019",
-        Title: "Autumn Leaves"
+        Title: "Autumn Leaves",
+        Location: "Fairfield, CT"
 
     },
 
     {  
 
         Enum: "020",
-        Title: "Autumn Tree"
+        Title: "Autumn Tree",
+        Location: "Fairfield, CT"
 
     },
 
     {  
 
         Enum: "021",
-        Title: "Red and Yellow"
+        Title: "Red and Yellow",
+        Location: "Fairfield, CT"
 
     },
 
     {  
 
         Enum: "023", // added later
-        Title: "Reflections"
+        Title: "Reflections",
+        Location: "Fairfield, CT"
 
     },
 
     {
 
         Enum: "011", // this one looks better last.
-        Title: "Sunset Hills"
+        Title: "Sunset Hills",
+        Location: "Fairfield, CT"
 
     },
 
@@ -344,18 +371,20 @@ export const MasonryPhotosEnums: Partial<MasonryPhoto>[] = [
 
 export const MasonryPhotos: MasonryPhoto[] = MasonryPhotosEnums.map(Photo => ({
 
-    Enum: Photo.Enum!,
+    Enum: Photo.Enum!, // we know it exists
 
     URLs: {
 
         SmallScaled: `https://cdn.sprout.software/Files/Sprout/Hosting/PFotos/Small/${Photo.Enum}_scaled.webp`,
 
         Small: `https://cdn.sprout.software/Files/Sprout/Hosting/PFotos/Small/${Photo.Enum}.webp`,
-        Medium: `https://cdn.sprout.software/Files/Sprout/Hosting/PFotos/Medium/${Photo.Enum}.webp`,
+        Medium: `https://cdn.sprout.software/Files/Sprout/Hosting/PFotos/Med/${Photo.Enum}.webp`,
         Large: `https://cdn.sprout.software/Files/Sprout/Hosting/PFotos/Large/${Photo.Enum}.webp`
 
     },
 
-    Title: Photo.Title!
+    Title: Photo.Title!, // same thing
+
+    Location: Photo.Location! // also same thing...
 
 }));
