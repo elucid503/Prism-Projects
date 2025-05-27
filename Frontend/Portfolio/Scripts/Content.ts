@@ -102,7 +102,7 @@ export const ProjectCards: ProjectCard[] = [
     {
 
         Title: "Synthara for Discord",
-        Description: "A popular, fast,and reliable music bot on the Discord chat app.",
+        Description: "A popular, fast, and reliable music bot on the Discord chat app.",
         IconName: "musical-note-outline"
 
     },
