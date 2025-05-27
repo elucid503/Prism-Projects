@@ -34,7 +34,7 @@ export function HandleFooterLinks(): void {
 
     RelevantElements.Container.empty();
 
-    for (const Card of FooterLinks) {
+    for (const Card of FooterLinks()) {
 
         RelevantElements.Container.append(GenerateFooterLink(Card));
 
