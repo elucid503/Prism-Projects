@@ -1,3 +1,28 @@
+// Util
+
+const DomainName = () => { return window.location.hostname; }
+
+const GetLinkedInName = () => {
+
+    const Domain = DomainName();
+
+    if (Domain.length == 14) {
+
+        // we know that this is the full name
+
+        const Cleaned = Domain.replace(/\.com$/, "");
+        const [First, Last] = [Cleaned.slice(0, 4), Cleaned.slice(4)]
+
+        return `https://www.linkedin.com/in/${First}-${Last}-402955228/`
+
+    } else {
+
+        return null; // no can do
+
+    }
+    
+}
+
 // Featured Section
 
 export type FeaturedImage = { ImageURL: string, Title: string, Meta: { Date: string, Location: string } };
@@ -421,41 +446,55 @@ export type FooterLink = {
 
 }
 
-export const FooterLinks: FooterLink[] = [
+export const FooterLinks = () => {
 
-    {
-        Title: "Personal Email",
-        IconName: "mail",
-        
-        URL: "mailto:me@paulujlaky.com"
+    // Needs to be a function as there's a little bit of logic for the linkedin part
 
-    },
+    const LinkedInName = GetLinkedInName();
 
-    {
+    const FooterLinksToReturn: FooterLink[] = [
 
-        Title: "Business Email",
-        IconName: "mail",
+        {
+            Title: "Personal Email",
+            IconName: "mail",
+            
+            URL: `mailto:me@${DomainName()}` 
 
-        URL: "mailto:paul@sprout.software"
+        },
 
-    },
+        {
 
-    {
+            Title: "Business Email",
+            IconName: "mail",
 
-        Title: "LinkedIn",
-        IconName: "logo-linkedin",
+            URL: "mailto:paul@sprout.software"
 
-        URL: "https://www.linkedin.com/in/paul-ujlaky-402955228/"
+        },
 
-    },
+        {
 
-    {
+            Title: "GitHub",
+            IconName: "logo-github",
 
-        Title: "GitHub",
-        IconName: "logo-github",
+            URL: "https://github.com/elucid503"
 
-        URL: "https://github.com/elucid503"
+        }
+
+    ]
+
+    if (LinkedInName) {
+
+        FooterLinksToReturn.push({
+
+            Title: "LinkedIn",
+            IconName: "logo-linkedin",
+
+            URL: LinkedInName
+
+        });
 
     }
 
-]
+    return FooterLinksToReturn;
+
+}
